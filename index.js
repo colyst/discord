@@ -32,6 +32,9 @@ client.on('messageCreate', message => {
   if (content.includes("nazi")) {
     message.channel.send('卐🍪');
   }
+  if (content.includes("<@1421622965958742217>")) {
+    message.reply('fuck you don't ping me bitch');
+  }
 });
 
 client.login(process.env.DISCORD_TOKEN);
