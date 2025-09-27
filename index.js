@@ -21,10 +21,16 @@ client.on('messageCreate', message => {
   // normalize
   const content = message.content.trim().toLowerCase();
 
-  if (content === 'nigga') {
+  if (content.includes === 'nigga') {
     // message.reply -> mentions the user
     // message.channel.send does not
     message.channel.send('i forgive u 🙏');
+  }
+  if (content.includes === 'nigger') {
+    message.channel.send('i forgive u 🙏');
+  }
+  if (content.includes === 'nazi') {
+    message.channel.send('卐🍪');
   }
 });
 
