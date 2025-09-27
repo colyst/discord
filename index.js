@@ -24,13 +24,9 @@ client.on('messageCreate', message => {
   const content = message.content.trim().toLowerCase();
   const user = message.author.id;
 
-  if (content.includes("nigga")) {
+  if (["nigga", "nigger", "niga", "nega", "niger"].some(thething => content.includes(thething))) {
     // message.reply -> mentions the user
     // message.channel.send does not
-    message.channel.send("i forgive u 🙏");
-  }
-  
-  if (content.includes("nigger")) {
     message.channel.send("i forgive u 🙏");
   }
 
@@ -44,11 +40,11 @@ client.on('messageCreate', message => {
     return;
   }
 
-  if (content.includes(stfu)) {
+  if (content.includes("stfu")) {
     const state = ping.get(user);
 
-    if (state === 'pong') {
-      message.channel.send('no u');
+    if (state === "pong") {
+      message.channel.send("no u");
       ping.delete(user); // reset state after
       return;
     }
